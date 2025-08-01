@@ -36,9 +36,9 @@ function App() {
   // react-hook-form 설정
   const form = useForm<InvitationFormData>({
     defaultValues: {
-      babyName: '튼튼이',
+      babyName: '열무',
       eventDate: new Date(),
-      eventTime: '오후 3시 00분',
+      eventTime: '오전 11시 00분',
       locationName: '아름다운 홀',
       locationAddress: '서울특별시 강남구 테헤란로 123',
       fatherName: '김아빠',
