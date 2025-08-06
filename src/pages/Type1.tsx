@@ -1,4 +1,3 @@
-import React from 'react';
 // 배경 꽃 일러스트 파일을 불러옵니다
 import flowerBg from '@/assets/flower-bg2.jpeg';
 

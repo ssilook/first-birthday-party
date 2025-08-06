@@ -1,4 +1,3 @@
-import React from 'react'
 import babyPolaroid from '@/assets/bg1.jpg'; // 폴라로이드 스타일의 아이 사진
 import paperBg from '@/assets/bg1.jpg';         // 낡은 종이 질감의 배경 이미지
 import mapImage from '@/assets/map.png';           // 지도 이미지
