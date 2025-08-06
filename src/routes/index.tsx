@@ -1,23 +1,28 @@
 import { createBrowserRouter, RouterProvider } from 'react-router'
-import Home from '@/pages/Home'
+import DefaultLayout from '@/layouts/DefaultLayout'
+import Type1 from '@/pages/Type1'
+import Type2 from '@/pages/Type2'
 
 const router = createBrowserRouter([
     {
-      path: '/',
-      element: <Home />
+      path: '/first-birthday-party',
+      element: <DefaultLayout />
     },
-    /*
     {
-      element: <PrivateRoute><DefaultLayout /></PrivateRoute>,
-      errorElement: <ErrorPageFull />,
+      element: <DefaultLayout />,
+      // errorElement: <ErrorPageFull />,
       children: [
         {
-          path: '/',
-          element: <Home />
-        }
+					path: '/first-birthday-party/Type1',
+					element: <Type1 />
+				},
+				{
+					path: '/first-birthday-party/Type2',
+					element: <Type2 />
+				}
       ]
     },
-    {
+    /* {
       path: '*',
       element: <NotFound />
     } */
