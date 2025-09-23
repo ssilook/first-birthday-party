@@ -1,79 +1,128 @@
-// 배경 꽃 일러스트 파일을 불러옵니다
+import { useState } from 'react';
 import flowerBg from '@/assets/flower-bg2.jpeg';
 
-// Placeholder 이미지 URL (나중에 실제 아이 사진 URL로 교체)
-// const babyPhotoUrl = 'https://via.placeholder.com/250/FFE4E1/F08080?text=Baby+Photo';
-const babyPhotoUrl = ''; // 또는 비워두고 나중에 채워넣으세요.
+const mainPhotoUrl = 'https://via.placeholder.com/800x600/FFE4E1/F08080?text=Main+Photo';
+
+const galleryPhotos = [
+  { id: 1, url: 'https://via.placeholder.com/300x300/FFE4E1/F08080?text=Photo+1', alt: '윤서 사진 1' },
+  { id: 2, url: 'https://via.placeholder.com/300x300/FFF0F5/FF69B4?text=Photo+2', alt: '윤서 사진 2' },
+  { id: 3, url: 'https://via.placeholder.com/300x300/F0FFF0/98FB98?text=Photo+3', alt: '윤서 사진 3' },
+  { id: 4, url: 'https://via.placeholder.com/300x300/F0F8FF/87CEEB?text=Photo+4', alt: '윤서 사진 4' },
+  { id: 5, url: 'https://via.placeholder.com/300x300/FFF8DC/DDA0DD?text=Photo+5', alt: '윤서 사진 5' },
+  { id: 6, url: 'https://via.placeholder.com/300x300/FFFAF0/F4A460?text=Photo+6', alt: '윤서 사진 6' },
+];
 
 function Type1() {
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4 font-sans">
-      <div 
-        className="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white shadow-xl rounded-2xl overflow-hidden p-6 relative"
-        // 배경 이미지를 적용합니다. 
-        // flowerBg가 없는 경우를 대비해 bg-white를 기본값으로 둡니다.
-        style={{ 
-          backgroundImage: flowerBg ? `url(${flowerBg})` : 'none', 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center' 
-        }}
-      >
-        {/* 상단 문구 및 제목 */}
-        <div className="text-center mt-4">
-          <p className="text-sm md:text-base tracking-widest text-gray-500 font-medium">1ST BIRTHDAY PARTY</p>
-          <h1 className="text-3xl md:text-4xl mt-2 text-gray-800 font-bold font-jamsil">
-            <span className="text-pink-500">윤서</span>, 첫 생일
-          </h1>
-        </div>
-
-        {/* 아이 사진 영역 - 나중에 사진을 넣을 수 있도록 레이아웃만 처리 */}
-        <div className="relative my-8 flex justify-center items-center">
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-md bg-pink-100 flex items-center justify-center text-gray-400">
-            {babyPhotoUrl ? (
-              <img 
-                src={babyPhotoUrl} 
-                alt="윤서의 돌 사진" 
-                className="w-full h-full object-cover" 
-              />
-            ) : (
-              <span className="text-sm">사진을 넣어주세요</span>
-            )}
-          </div>
-        </div>
-        
-        {/* 초대의 글 및 정보 */}
-        <div className="text-center mt-10 space-y-6">
-          <p className="text-xl md:text-2xl text-pink-500 font-cursive mb-4">
-            윤서의 돌잔치에 초대합니다
-          </p>
-          <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-            열 달의 설렘과 일 년의 행복으로 무럭무럭 자란<br/>
-            윤서가 드디어 첫 번째 생일을 맞이합니다.<br/>
-            <br/>
-            사랑스러운 아기의 첫 생일을 축하하는 자리에<br/>
-            귀한 걸음 하시어 기쁨을 나누어 주시면 감사하겠습니다.
-          </p>
-
-          <div className="flex justify-center items-center space-x-4 mt-8">
-            <p className="text-sm md:text-base text-gray-700 font-medium">
-              아빠 강신욱 💛 엄마 정수진
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-lg tracking-widest text-gray-500 font-medium mb-4">1ST BIRTHDAY PARTY</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+              <span className="text-pink-500">윤서</span>의 첫 생일
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              열 달의 설렘과 일 년의 행복으로 무럭무럭 자란 윤서가<br/>
+              드디어 첫 번째 생일을 맞이합니다.
             </p>
           </div>
-          
-          <div className="border-t border-gray-200 mt-6 pt-6">
-            <p className="text-sm md:text-base text-gray-800 font-medium">
-              2025년 12월 6일 토요일 11:00
-            </p>
-            <p className="text-sm md:text-base text-gray-700 mt-2">
-              플로렌스 위례점
-            </p>
-            <p className="text-sm md:text-base text-gray-700">
-              경기 성남시 수정구 위례광장로 300 위례중앙타워 12층
-            </p>
+
+          {/* Main Photo */}
+          <div className="flex justify-center mb-16">
+            <div className="relative group">
+              <div
+                className="w-96 h-96 md:w-[500px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl bg-white p-4"
+                style={{
+                  backgroundImage: flowerBg ? `url(${flowerBg})` : 'none',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="w-full h-full rounded-2xl overflow-hidden bg-pink-100 flex items-center justify-center">
+                  <img
+                    src={mainPhotoUrl}
+                    alt="윤서의 메인 사진"
+                    className="w-full h-full object-cover cursor-pointer transition-transform group-hover:scale-105"
+                    onClick={() => setSelectedPhoto(mainPhotoUrl)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Event Info */}
+          <div className="text-center bg-white rounded-3xl shadow-lg p-8 mb-16 max-w-2xl mx-auto">
+            <h2 className="text-3xl text-pink-500 font-bold mb-6">초대합니다</h2>
+            <div className="space-y-4 text-gray-700">
+              <p className="text-lg">
+                <strong>2025년 12월 6일 토요일 오전 11:00</strong>
+              </p>
+              <p className="text-md">플로렌스 위례점</p>
+              <p className="text-sm text-gray-600">
+                경기 성남시 수정구 위례광장로 300 위례중앙타워 12층
+              </p>
+              <div className="border-t border-gray-200 pt-4 mt-6">
+                <p className="text-md">
+                  아빠 <span className="text-pink-500 font-semibold">강신욱</span> 💛 엄마 <span className="text-pink-500 font-semibold">정수진</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
+      {/* Photo Gallery */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">Photo Gallery</h2>
+          <p className="text-center text-gray-600 mb-12">윤서의 소중한 순간들</p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            {galleryPhotos.map((photo) => (
+              <div
+                key={photo.id}
+                className="group cursor-pointer"
+                onClick={() => setSelectedPhoto(photo.url)}
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-square">
+                  <img
+                    src={photo.url}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modal for enlarged photo */}
+      {selectedPhoto && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh]">
+            <img
+              src={selectedPhoto}
+              alt="확대된 사진"
+              className="max-w-full max-h-full object-contain rounded-lg"
+            />
+            <button
+              className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-70"
+              onClick={() => setSelectedPhoto(null)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

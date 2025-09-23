@@ -24,6 +24,11 @@ function Header() {
                   <Link to="/first-birthday-party/type2">가로 타입</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link to="/first-birthday-party/practice">Practice</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
