@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import babyPolaroid from '@/assets/bg1.jpg';
+// import babyPolaroid from '@/assets/bg1.jpg';
 import paperBg from '@/assets/bg1.jpg';
 import mapImage from '@/assets/map.png';
 
