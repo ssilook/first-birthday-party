@@ -2,18 +2,27 @@ import { useState } from 'react';
 // import babyPolaroid from '@/assets/bg1.jpg';
 import paperBg from '@/assets/bg1.jpg';
 import mapImage from '@/assets/map.png';
+import mainPhoto from '@/assets/YoonSeo/933956_강윤서_돌 (071).jpg'
+import galleryPhoto1 from '@/assets/YoonSeo/933956_강윤서_돌 (083).jpg'
+import galleryPhoto2 from '@/assets/YoonSeo/933956_강윤서_돌 (067).jpg'
+import galleryPhoto3 from '@/assets/YoonSeo/933956_강윤서_돌 (094).jpg'
+import galleryPhoto4 from '@/assets/YoonSeo/933956_강윤서_돌 (099).jpg'
+import galleryPhoto5 from '@/assets/YoonSeo/933956_강윤서_돌 (106).jpg'
+import galleryPhoto6 from '@/assets/YoonSeo/933956_강윤서_돌 (122).jpg'
+import galleryPhoto7 from '@/assets/YoonSeo/933956_강윤서_돌 (141).jpg'
+import galleryPhoto8 from '@/assets/YoonSeo/933956_강윤서_돌 (154).jpg'
 
-const mainPhotoUrl = 'https://via.placeholder.com/600x800/F5E6D3/8B4513?text=Main+Photo';
+const mainPhotoUrl = mainPhoto;
 
 const galleryPhotos = [
-  { id: 1, url: 'https://via.placeholder.com/350x350/F5E6D3/8B4513?text=Photo+1', alt: '윤서 사진 1' },
-  { id: 2, url: 'https://via.placeholder.com/350x350/E6DDD4/A0522D?text=Photo+2', alt: '윤서 사진 2' },
-  { id: 3, url: 'https://via.placeholder.com/350x350/F4E4BC/CD853F?text=Photo+3', alt: '윤서 사진 3' },
-  { id: 4, url: 'https://via.placeholder.com/350x350/E8E2DB/D2B48C?text=Photo+4', alt: '윤서 사진 4' },
-  { id: 5, url: 'https://via.placeholder.com/350x350/F0E5D0/BC9A6A?text=Photo+5', alt: '윤서 사진 5' },
-  { id: 6, url: 'https://via.placeholder.com/350x350/EDE4D3/B8860B?text=Photo+6', alt: '윤서 사진 6' },
-  { id: 7, url: 'https://via.placeholder.com/350x350/F6F1E8/D4A574?text=Photo+7', alt: '윤서 사진 7' },
-  { id: 8, url: 'https://via.placeholder.com/350x350/F3E8D8/C8956D?text=Photo+8', alt: '윤서 사진 8' },
+  { id: 1, url: galleryPhoto1, alt: '윤서 사진 1' },
+  { id: 2, url: galleryPhoto2, alt: '윤서 사진 2' },
+  { id: 3, url: galleryPhoto3, alt: '윤서 사진 3' },
+  { id: 4, url: galleryPhoto4, alt: '윤서 사진 4' },
+  { id: 5, url: galleryPhoto5, alt: '윤서 사진 5' },
+  { id: 6, url: galleryPhoto6, alt: '윤서 사진 6' },
+  { id: 7, url: galleryPhoto7, alt: '윤서 사진 7' },
+  { id: 8, url: galleryPhoto8, alt: '윤서 사진 8' },
 ];
 
 function Type2() {

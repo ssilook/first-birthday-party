@@ -1,15 +1,23 @@
 import { useState } from 'react';
 import flowerBg from '@/assets/flower-bg2.jpeg';
+import mainPhoto from '@/assets/YoonSeo/933956_강윤서_돌 (071).jpg'
+import galleryPhoto1 from '@/assets/YoonSeo/933956_강윤서_돌 (083).jpg'
+import galleryPhoto2 from '@/assets/YoonSeo/933956_강윤서_돌 (067).jpg'
+import galleryPhoto3 from '@/assets/YoonSeo/933956_강윤서_돌 (099).jpg'
+import galleryPhoto4 from '@/assets/YoonSeo/933956_강윤서_돌 (106).jpg'
+import galleryPhoto5 from '@/assets/YoonSeo/933956_강윤서_돌 (122).jpg'
+import galleryPhoto6 from '@/assets/YoonSeo/933956_강윤서_돌 (154).jpg'
 
-const mainPhotoUrl = 'https://via.placeholder.com/800x600/FFE4E1/F08080?text=Main+Photo';
+
+const mainPhotoUrl = mainPhoto;
 
 const galleryPhotos = [
-  { id: 1, url: 'https://via.placeholder.com/300x300/FFE4E1/F08080?text=Photo+1', alt: '윤서 사진 1' },
-  { id: 2, url: 'https://via.placeholder.com/300x300/FFF0F5/FF69B4?text=Photo+2', alt: '윤서 사진 2' },
-  { id: 3, url: 'https://via.placeholder.com/300x300/F0FFF0/98FB98?text=Photo+3', alt: '윤서 사진 3' },
-  { id: 4, url: 'https://via.placeholder.com/300x300/F0F8FF/87CEEB?text=Photo+4', alt: '윤서 사진 4' },
-  { id: 5, url: 'https://via.placeholder.com/300x300/FFF8DC/DDA0DD?text=Photo+5', alt: '윤서 사진 5' },
-  { id: 6, url: 'https://via.placeholder.com/300x300/FFFAF0/F4A460?text=Photo+6', alt: '윤서 사진 6' },
+  { id: 1, url: galleryPhoto1, alt: '윤서 사진 1' },
+  { id: 2, url: galleryPhoto2, alt: '윤서 사진 2' },
+  { id: 3, url: galleryPhoto3, alt: '윤서 사진 3' },
+  { id: 4, url: galleryPhoto4, alt: '윤서 사진 4' },
+  { id: 5, url: galleryPhoto5, alt: '윤서 사진 5' },
+  { id: 6, url: galleryPhoto6, alt: '윤서 사진 6' },
 ];
 
 function Type1() {
@@ -94,7 +102,7 @@ function Type1() {
                     alt={photo.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                 </div>
               </div>
             ))}
