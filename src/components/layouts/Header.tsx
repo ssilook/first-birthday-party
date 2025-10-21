@@ -16,12 +16,12 @@ function Header() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link to="/Type1">세로 타입</Link>
+                  <Link to="/type1">세로 타입</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link to="/Type2">가로 타입</Link>
+                  <Link to="/type2">가로 타입</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             {/* <NavigationMenuItem>

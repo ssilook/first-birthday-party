@@ -80,11 +80,11 @@ function Type2() {
               <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border-2 border-amber-200">
                 <div className="space-y-4">
                   <p className="text-xl font-bold text-amber-900">
-                    2025년 12월 06일 (토) 오전 11시
+                    2025년 12월 06일 (토) 오전 11시 30분
                   </p>
                   <p className="text-lg text-amber-800">플로렌스 위례점</p>
                   <p className="text-amber-700">
-                    경기 성남시 수정구 위례광장로 300 위례중앙타워 12층
+                    경기 성남시 수정구 위례광장로300 위례중앙타워 12F 카네기홀
                   </p>
                   <div className="border-t border-amber-200 pt-4">
                     <p className="text-amber-800">
@@ -146,12 +146,12 @@ function Type2() {
                   src={mapImage}
                   alt="돌잔치 장소 지도"
                   className="w-full h-64 md:h-80 object-cover"
+                  onClick={() => window.open("https://naver.me/5qDjc00o", "_blank")}
                 />
               </div>
               <div className="p-8 bg-amber-50">
                 <div className="space-y-4 text-amber-800">
-                  <p><span className="font-bold text-amber-900">주소:</span> 경기 성남시 수정구 위례광장로 300</p>
-                  <p><span className="font-bold text-amber-900">연락처:</span> 02-000-0000</p>
+                  <p><span className="font-bold text-amber-900">주소:</span> 경기 성남시 수정구 위례광장로 300 12F</p>
                   <p><span className="font-bold text-amber-900">주차:</span> 건물 뒤 주차장 이용</p>
                   <div className="border-t border-amber-200 pt-4">
                     <p><span className="font-bold text-amber-900">대중교통:</span> 지하철 이용 시</p>

@@ -12,14 +12,14 @@ const router = createHashRouter([
       children: [
         {
           path: '/',
-          element: <Navigate to='/Type1' replace />
+          element: <Navigate to='/type2' replace />
         },
         {
-          path: '/Type1',
+          path: '/type1',
           element: <Type1 />
         },
         {
-          path: '/Type2',
+          path: '/type2',
           element: <Type2 />
         }
         /* {

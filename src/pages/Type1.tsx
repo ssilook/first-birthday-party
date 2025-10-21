@@ -65,11 +65,11 @@ function Type1() {
             <h2 className="text-3xl text-pink-500 font-bold mb-6">초대합니다</h2>
             <div className="space-y-4 text-gray-700">
               <p className="text-lg">
-                <strong>2025년 12월 6일 토요일 오전 11:00</strong>
+                <strong>2025년 12월 6일 토요일 오전 11:30</strong>
               </p>
               <p className="text-md">플로렌스 위례점</p>
               <p className="text-sm text-gray-600">
-                경기 성남시 수정구 위례광장로 300 위례중앙타워 12층
+                경기 성남시 수정구 위례광장로 300 위례중앙타워 12층 카네기홀
               </p>
               <div className="border-t border-gray-200 pt-4 mt-6">
                 <p className="text-md">
