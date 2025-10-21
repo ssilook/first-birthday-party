@@ -2,15 +2,15 @@ import { useState } from 'react';
 // import babyPolaroid from '@/assets/bg1.jpg';
 import paperBg from '@/assets/bg1.jpg';
 import mapImage from '@/assets/map.png';
-import mainPhoto from '@/assets/YoonSeo/933956_강윤서_돌 (071).jpg'
-import galleryPhoto1 from '@/assets/YoonSeo/933956_강윤서_돌 (083).jpg'
-import galleryPhoto2 from '@/assets/YoonSeo/933956_강윤서_돌 (067).jpg'
-import galleryPhoto3 from '@/assets/YoonSeo/933956_강윤서_돌 (094).jpg'
-import galleryPhoto4 from '@/assets/YoonSeo/933956_강윤서_돌 (099).jpg'
-import galleryPhoto5 from '@/assets/YoonSeo/933956_강윤서_돌 (106).jpg'
-import galleryPhoto6 from '@/assets/YoonSeo/933956_강윤서_돌 (122).jpg'
-import galleryPhoto7 from '@/assets/YoonSeo/933956_강윤서_돌 (141).jpg'
-import galleryPhoto8 from '@/assets/YoonSeo/933956_강윤서_돌 (154).jpg'
+import mainPhoto from '@/assets/YoonSeo/kang_main_1_071.jpg'
+import galleryPhoto1 from '@/assets/YoonSeo/kang_sub_1_083.jpg'
+import galleryPhoto2 from '@/assets/YoonSeo/kang_sub_2_067.jpg'
+import galleryPhoto3 from '@/assets/YoonSeo/kang_sub_3_094.jpg'
+import galleryPhoto4 from '@/assets/YoonSeo/kang_sub_4_099.jpg'
+import galleryPhoto5 from '@/assets/YoonSeo/kang_sub_5_106.jpg'
+import galleryPhoto6 from '@/assets/YoonSeo/kang_sub_6_122.jpg'
+import galleryPhoto7 from '@/assets/YoonSeo/kang_sub_7_141.jpg'
+import galleryPhoto8 from '@/assets/YoonSeo/kang_sub_8_154.jpg'
 
 const mainPhotoUrl = mainPhoto;
 
