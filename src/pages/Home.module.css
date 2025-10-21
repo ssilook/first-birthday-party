@@ -1,6 +1,7 @@
 /* --- 폰트 및 색상 정의 --- */
 @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_202112@1.0/KyoboHand.woff2');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GongGothicMedium.woff');
 
 :root {
   --dark-brown: #A0522D;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import babyPolaroid from '@/assets/bg1.jpg';
 import paperBg from '@/assets/bg1.jpg';
-import mapImage from '@/assets/map.png';
+import mapImage from '@/assets/mapImg.jpg';
 import mainPhoto from '@/assets/YoonSeo/kang_main_1_071.jpg'
 import galleryPhoto1 from '@/assets/YoonSeo/kang_sub_1_083.jpg'
 import galleryPhoto2 from '@/assets/YoonSeo/kang_sub_2_067.jpg'
@@ -152,13 +152,55 @@ function Type2() {
               <div className="p-8 bg-amber-50">
                 <div className="space-y-4 text-amber-800">
                   <p><span className="font-bold text-amber-900">주소:</span> 경기 성남시 수정구 위례광장로 300 12F</p>
-                  <p><span className="font-bold text-amber-900">주차:</span> 건물 뒤 주차장 이용</p>
+                  <p><span className="font-bold text-amber-900">주차:</span> 건물 주차 3시간 무료</p>
                   <div className="border-t border-amber-200 pt-4">
-                    <p><span className="font-bold text-amber-900">대중교통:</span> 지하철 이용 시</p>
-                    <p className="text-sm">8호선 위례신사역 3번 출구 도보 5분</p>
+                    <button
+                      className="w-full bg-[#00C73C] hover:bg-[#00B030] text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+                      onClick={() => window.open("https://naver.me/5qDjc00o", "_blank")}
+                    >
+                      네이버 지도로 보기
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Heart Message Section */}
+      <section className="py-16 px-4 bg-amber-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl shadow-xl p-10 border-2 border-amber-200">
+            <div className="text-center space-y-6">
+              <h3 className="text-3xl font-bold text-amber-900 mb-4">💕 윤서에게 마음 전하기</h3>
+              <p className="text-lg text-amber-800 mb-8">
+                윤서의 돌잔치에 참석하기 어려우신 분들을 위해 선물을 준비했습니다.
+              </p>
+
+              <div className="space-y-6">
+                {/* 카카오뱅크 */}
+                <div className="bg-amber-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-200">
+                  <p className="text-amber-700 mb-4 text-center font-semibold">카카오뱅크</p>
+                  <div className="text-center space-y-4">
+                    <p className="text-lg md:text-xl font-bold text-amber-900">정수진</p>
+                    <p className="text-base md:text-lg font-bold text-amber-900">3333-31-3663773</p>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('3333-31-3663773');
+                        alert('계좌번호가 복사되었습니다!');
+                      }}
+                      className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-lg transition-colors"
+                    >
+                      복사
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-sm text-amber-700 mt-8">
+                선물은 강요하지 않습니다.<br />윤서의 성장을 축복해주는 마음만으로도 충분합니다.
+              </p>
             </div>
           </div>
         </div>
