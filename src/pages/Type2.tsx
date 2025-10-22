@@ -27,6 +27,7 @@ const galleryPhotos = [
 
 function Type2() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [showAccount, setShowAccount] = useState<boolean>(false);
 
   return (
     <div
@@ -152,7 +153,7 @@ function Type2() {
               <div className="p-8 bg-amber-50">
                 <div className="space-y-4 text-amber-800">
                   <p><span className="font-bold text-amber-900">주소:</span> 경기 성남시 수정구 위례광장로 300 12F</p>
-                  <p><span className="font-bold text-amber-900">주차:</span> 건물 주차 3시간 무료</p>
+                  <p><span className="font-bold text-amber-900">주차:</span> 위례중앙타워, 하객 3시간 무료주차</p>
                   <div className="border-t border-amber-200 pt-4">
                     <button
                       className="w-full bg-[#00C73C] hover:bg-[#00B030] text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
@@ -179,23 +180,33 @@ function Type2() {
               </p>
 
               <div className="space-y-6">
-                {/* 카카오뱅크 */}
-                <div className="bg-amber-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow border border-amber-200">
-                  <p className="text-amber-700 mb-4 text-center font-semibold">카카오뱅크</p>
-                  <div className="text-center space-y-4">
-                    <p className="text-lg md:text-xl font-bold text-amber-900">정수진</p>
-                    <p className="text-base md:text-lg font-bold text-amber-900">3333-31-3663773</p>
-                    <button
-                      onClick={() => {
-                        navigator.clipboard.writeText('3333-31-3663773');
-                        alert('계좌번호가 복사되었습니다!');
-                      }}
-                      className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-lg transition-colors"
-                    >
-                      복사
-                    </button>
+                {!showAccount ? (
+                  <button
+                    onClick={() => setShowAccount(true)}
+                    className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-6 rounded-2xl transition-colors w-full text-lg md:text-xl shadow-md hover:shadow-lg"
+                  >
+                    마음 보낼곳
+                  </button>
+                ) : (
+                  <div className="bg-amber-50 rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow border border-amber-200">
+                    <div className="text-center space-y-3">
+                      <p className="text-amber-700 font-semibold text-lg">카카오뱅크</p>
+                      <p className="text-lg md:text-xl font-bold text-amber-900">정수진</p>
+                      <p className="text-base md:text-lg font-bold text-amber-900 bg-white bg-opacity-60 rounded-lg py-3 px-4 border border-amber-300">
+                        3333-31-3663773
+                      </p>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText('3333-31-3663773');
+                          alert('계좌번호가 복사되었습니다!');
+                        }}
+                        className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-lg transition-colors w-full"
+                      >
+                        복사
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               <p className="text-sm text-amber-700 mt-8">
