@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import React from 'react';
 import { Grid, Repeat, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
-// import babyPolaroid from '@/assets/bg1.jpg';
 import paperBg from '@/assets/bg1.jpg';
 import mapImage from '@/assets/mapImg.jpg';
 import mainPhoto from '@/assets/YoonSeo/kang_main_1_071.jpg'
@@ -32,26 +30,8 @@ type GalleryViewType = 'grid' | 'carousel';
 function Type2() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const [showAccount, setShowAccount] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
-  const [galleryView, setGalleryView] = useState<GalleryViewType>(isMobile ? 'carousel' : 'grid');
+  const [galleryView, setGalleryView] = useState<GalleryViewType>('grid');
   const [carouselIndex, setCarouselIndex] = useState<number>(0);
-
-  // Handle window resize
-  const handleResize = () => {
-    const mobile = window.innerWidth < 768;
-    setIsMobile(mobile);
-    if (mobile && galleryView === 'grid') {
-      setGalleryView('carousel');
-    } else if (!mobile && galleryView === 'carousel') {
-      setGalleryView('grid');
-    }
-  };
-
-  // Add resize listener on mount
-  React.useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [galleryView]);
 
   return (
     <div
@@ -245,7 +225,7 @@ function Type2() {
                 </div>
 
                 {/* Dot Indicators - Hidden */}
-                <div className="flex justify-center gap-3 mt-6 hidden">
+                <div className="flex justify-center gap-3 mt-6">
                   {galleryPhotos.map((_, index) => (
                     <button
                       key={index}
