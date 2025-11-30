@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import flowerBg from '@/assets/flower-bg2.jpeg';
-import mainPhoto from '@/assets/YoonSeo/kang_main_1_071.jpg'
-import galleryPhoto1 from '@/assets/YoonSeo/kang_sub_1_083.jpg'
-import galleryPhoto2 from '@/assets/YoonSeo/kang_sub_2_067.jpg'
-import galleryPhoto3 from '@/assets/YoonSeo/kang_sub_4_099.jpg'
-import galleryPhoto4 from '@/assets/YoonSeo/kang_sub_5_106.jpg'
-import galleryPhoto5 from '@/assets/YoonSeo/kang_sub_6_122.jpg'
-import galleryPhoto6 from '@/assets/YoonSeo/kang_sub_8_154.jpg'
+import flowerBg from '/optimized-images/flower-bg2.webp';
+import mainPhoto from '/optimized-images/YoonSeo/kang_main_1_071.webp'
+import galleryPhoto1 from '/optimized-images/YoonSeo/kang_sub_1_083.webp'
+import galleryPhoto2 from '/optimized-images/YoonSeo/kang_sub_2_067.webp'
+import galleryPhoto3 from '/optimized-images/YoonSeo/kang_sub_4_099.webp'
+import galleryPhoto4 from '/optimized-images/YoonSeo/kang_sub_5_106.webp'
+import galleryPhoto5 from '/optimized-images/YoonSeo/kang_sub_6_122.webp'
+import galleryPhoto6 from '/optimized-images/YoonSeo/kang_sub_8_154.webp'
 const mainPhotoUrl = mainPhoto;
 
 const galleryPhotos = [

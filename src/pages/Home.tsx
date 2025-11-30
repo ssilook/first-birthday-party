@@ -1,7 +1,7 @@
 import styles from './Home.module.css';
-import babyPolaroid from '@/assets/bg1.jpg';
-import paperBg from '@/assets/bg1.jpg';
-import mapImage from '@/assets/map.png';
+import babyPolaroid from '/optimized-images/bg1.webp';
+import paperBg from '/optimized-images/bg1.webp';
+import mapImage from '/optimized-images/mapImg.webp';
 
 function Home() {
   return (
